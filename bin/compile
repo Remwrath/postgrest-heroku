@@ -110,7 +110,7 @@ EOF
 else
   cat <<EOF > $BUILD_DIR/Procfile
 worker: ./env-to-config ./${BIN} postgrest.conf
-web: ./bin/start-nginx-solo
+web: ./bin/start-nginx
 EOF
 fi
 
