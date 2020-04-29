@@ -109,8 +109,8 @@ web: ./${BIN} "postgres://$AUTH_ROLE:$AUTH_PASS@$DB_HOST:$DB_PORT/$DB_NAME" -p \
 EOF
 else
   cat <<EOF > $BUILD_DIR/Procfile
-worker: ./env-to-config ./${BIN} postgrest.conf
 web: ./bin/start-nginx
+worker: ./env-to-config ./${BIN} postgrest.conf
 EOF
 fi
 
