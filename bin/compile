@@ -112,8 +112,9 @@ else
 web: ./bin/start-nginx
 worker: ./env-to-config ./${BIN} postgrest.conf
 EOF
-echo "" > /tmp/app-initialized
 fi
+
+touch /tmp/app-initialized
 
 echo "-----> Persisting settings"
 PROFILE_PATH="$BUILD_DIR/.profile.d/postgrest.sh"
