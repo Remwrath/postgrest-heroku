@@ -33,7 +33,7 @@ for conf in "${config_settings[@]}"; do
 done
 
 # Bind to correct host and port for Heroku
-echo "server-host=\"0.0.0.0\"" >> $CONF_PATH
+echo "server-host=\"127.0.0.1\"" >> $CONF_PATH
 #echo "server-port=${PORT}" >> $CONF_PATH
 echo "server-unix-socket=\"/tmp/nginx.socket\""
 
